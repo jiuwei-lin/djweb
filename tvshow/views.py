@@ -13,4 +13,4 @@ def index(request, tvno=0):
     tvno = tvno
     tv = tv_list[tvno]
 
-    return render(request, 'tvshow_index.html', locals())
+    return render(request, 'tvshow.html', locals())

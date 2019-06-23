@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'mblog',
     'tvshow',
     'mshop',
+    'mform',
 ]
 
 MIDDLEWARE = [

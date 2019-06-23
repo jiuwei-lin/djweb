@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MShop</title>
+</head>
+
+<body>
+    <h1>Used Mobile Phone Shop</h1>
+    <hr>
+
+    {% for p in products %}
+
+    <table>
+
+        {% if forloop.first %}
+        <tr bgcolor="cccccc">
+            <td> nickname </td>
+            <td> name </td>
+            <td> brand </td>
+            <td> year </td>
+            <td> price </td>
+        </tr>
+
+        {% endif %}
+
+        <tr>
+            <td> {{ p.nickname }}</td>
+            <td> {{ p.pmodel.name }} </td>
+            <td> {{ p.pmodel.maker.name }} </td>
+            <td> {{ p.year }}</td>
+            <td> {{ p.price }}</td>
+        </tr>
+
+    </table>
+
+    {% endfor %}
+
+
+    <hr>
+    {{ now }}
+</body>
+
+</html>

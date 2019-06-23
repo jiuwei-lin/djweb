@@ -28,7 +28,7 @@ class Product(models.Model):
     price = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return self.pmodel
+        return self.pmodel.name
 
 
 class PPhoto(models.Model):
@@ -37,4 +37,4 @@ class PPhoto(models.Model):
     url = models.URLField()
 
     def __str__(self):
-        return self.product
+        return self.product.pmodel.name

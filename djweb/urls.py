@@ -25,5 +25,7 @@ urlpatterns = [
     #path('mblog/', homepage),
     #path('mblog/post/<slug:slug>/', showpost),
     path('mblog/', include('mblog.urls')),
-    path('tvshow/', include('tvshow.urls'))
+    path('mshop/', include('mshop.urls')),
+    path('mform/', include('mform.urls')),
+    path('tvshow/', include('tvshow.urls')),
 ]

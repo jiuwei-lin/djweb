@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MForm</title>
+</head>
+
+<body>
+    <form action="/mform" method="GET">
+        <label for="user_id">Your ID:</label>
+        <input id="user_id" type="text" name="user_id">
+        <label for="user_pass">Your Password:</label>
+        <input id="user_pass" type="text" name="user_pass">
+        <input type="submit" value="Log on">
+        <input type="reset" value="Clear">
+    </form>
+    <hr>
+
+    Your ID: {{ urid | default:"請輸入ID"}} <br>
+    Your Pass: {{ urpass }} <br>
+
+    {% if verified %}
+    <em>你通過驗證！</em>
+    {% else %}
+    <em>錯密碼囉！</em>
+    {% endif %}
+
+    <hr>
+    {{ now }}
+</body>
+
+</html>
