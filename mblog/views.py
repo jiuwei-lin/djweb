@@ -16,6 +16,7 @@ def homepage(request):
 def showpost(request, slug):
     try:
         post = Post.objects.get(slug=slug)
+
         if post != None:
             return render(request, 'mblog_post.html', locals())
     except:

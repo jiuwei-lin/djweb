@@ -9,6 +9,8 @@
 
 <body>
     <h1>Welcome to my blog</h1>
+    {% load static %}
+    <img src="{% static "images/mblog_logo.png" %}" alt="">
     <hr>
     {% load markdown_deux_tags %}
     {% for post in posts %}
