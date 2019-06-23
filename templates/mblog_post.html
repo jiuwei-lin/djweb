@@ -8,11 +8,12 @@
 </head>
 
 <body>
+    {% load markdown_deux_tags %}
     <h1>{{post.title}}</h1>
     <hr>
     <p>
         <small>
-            {{post.body}}
+            {{post.body | markdown }}
         </small>
     </p>
     <hr>

@@ -10,7 +10,7 @@
 <body>
     <h1>Welcome to my blog</h1>
     <hr>
-
+    {% load markdown_deux_tags %}
     {% for post in posts %}
     <p>
         <a href="/mblog/post/{{post.slug}}">
@@ -19,7 +19,7 @@
     </p>
     <p>
         <small>
-            {{post.body}}
+            {{post.body | markdown}}
         </small>
     </p>
     {% endfor %}
