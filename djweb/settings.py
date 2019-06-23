@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'markdown_deux',
     'mblog',
+    'tvshow',
+    'mshop',
 ]
 
 MIDDLEWARE = [
