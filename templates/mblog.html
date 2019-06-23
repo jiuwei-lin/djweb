@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mblog</title>
+</head>
+
+<body>
+    <h1>Welcome to my blog</h1>
+    <hr>
+
+    {% for post in posts %}
+    <p>
+        <a href="/mblog/post/{{post.slug}}">
+            {{post.slug}} - {{post.title}}
+        </a>
+    </p>
+    <p>
+        <small>
+            {{post.body}}
+        </small>
+    </p>
+    {% endfor %}
+    <hr>
+    {{ now }}
+</body>
+
+</html>
